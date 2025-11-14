@@ -107,12 +107,3 @@ A complete, ready-to-use React component for user signup and login.
 > *(link video coming soon)*
 
 ---
-
-## 🧩 Tech Stack
-
-- **Lovable Cloud** (Supabase backend)
-- **ZeroBounce API**
-- **React / TypeScript**
-- **shadcn/ui**
-
----
