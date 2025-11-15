@@ -87,17 +87,13 @@ Sets up the Supabase backend:
 - Functions for parsing, validating, and logging results.
 - A trigger on `auth.users` that automatically validates every signup.
 
-This migration is idempotent — you can run it safely multiple times in Cloud.
-
 ---
 
 ### 💫 `example_auth_form.tsx`
-A complete, ready-to-use React component for user signup and login.
-
-- Integrates Supabase Auth.
-- Displays “Did you mean…” suggestions inline.
-- Styled with [shadcn/ui](https://ui.shadcn.com) for production-ready polish.
-- Automatically shows ZeroBounce validation feedback through toasts.
+A production-ready signup form component built with:
+- React + TypeScript
+- Supabase Auth
+- shadcn/ui for a clean, modern style
 
 ---
 
@@ -105,5 +101,3 @@ A complete, ready-to-use React component for user signup and login.
 
 🎥 See the full tutorial on how to integrate this in **Lovable Cloud** step by step:
 > *(link video coming soon)*
-
----
