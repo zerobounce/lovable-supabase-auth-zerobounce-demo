@@ -28,3 +28,7 @@ disable protection in Supabase first, then set the frontend flag to `false`.
 Configure Supabase Auth signup rate limits separately. Every signup attempt that reaches
 the database trigger can spend a ZeroBounce API credit, whether CAPTCHA is enabled or not.
 Verify that repeated automated attempts are stopped before they reach the trigger.
+
+## License
+
+MIT. See [LICENSE](LICENSE).
