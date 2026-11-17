@@ -8,7 +8,7 @@ By participating in this project, you agree to uphold our [Code of Conduct](CODE
 
 ## Getting Started
 
-See the [README](README.md) for how the two files are used in Lovable with Supabase Auth. There is nothing to build or install; CI checks that the migration still contains the validation function and fails closed.
+See the [README](README.md) for the production controls. The blog post linked there is the walkthrough for using the two files in Lovable. There is nothing to build or install. CI checks that the migration still contains the validation function, the signup block, and the false-success guard, and it runs those guards in Postgres with no HTTP call. Sign-up still fails open on a transport error unless `ZEROBOUNCE_FAIL_CLOSED` is set.
 
 ## How to Contribute
 

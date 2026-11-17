@@ -13,8 +13,14 @@ The migration keeps the original fail-open behavior for ZeroBounce transport fai
 non-2xx responses, and unrecognized statuses. To deny signup in those cases, add a row to
 `public.app_secrets` with `name = ZEROBOUNCE_FAIL_CLOSED` and `value = true`. Set it to
 `false` (or remove the row) to restore the original behavior. Known invalid statuses and
-missing API keys still block signup regardless of this flag. Rejection events are written
+missing API keys still block signup regardless of this flag. A false `success` flag
+from ZeroBounce also blocks signup. Rejection events are written
 to PostgreSQL logs without raw email addresses; configure log retention and access.
+
+The migration sets the database HTTP timeout to 3 seconds (`http.timeout_msec`). The `http`
+extension follows up to five redirects on that POST and has no switch to turn that off, so a
+307 or 308 from the API host can send the request body, including the API key, to the
+redirect destination.
 
 For CAPTCHA, enable protection with hCaptcha in **Supabase Dashboard → Authentication →
 Bot and Abuse Protection** and enter the hCaptcha secret key there. This Supabase Auth
